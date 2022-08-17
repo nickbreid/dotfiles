@@ -1,3 +1,5 @@
+source ~/dev/dotfiles/zsh/omzrc
+
 # Prefer neovim
 alias vim=nvim
 alias tmux='tmux new -s base'
