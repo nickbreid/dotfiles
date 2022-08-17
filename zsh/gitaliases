@@ -1,0 +1,36 @@
+alias g='git'
+alias gst='git status'
+alias gaa='git add --all'
+
+alias gc='git commit -v'
+alias gcmsg='git commit -m'
+alias gcamend='git commit --amend'
+
+alias gcb='git checkout -b'
+alias gcd='git checkout develop'
+alias gco='git checkout'
+alias gc-='git checkout -'
+
+alias gd='clear && git diff'
+alias gds='git diff --staged'
+
+alias gpsup='git push -u origin HEAD'
+alias gp='git push'
+
+alias gl='git pull'
+
+alias gm='git merge'
+
+alias grb='git rebase'
+alias grbi='git rebase -i'
+alias grbid='git rebase -i develop'
+alias grbc='git rebase --continue'
+alias grba='git rebase --abort'
+
+alias gignore='git update-index --skip-worktree'
+alias gunignore='git update-index --no-skip-worktree'
+
+alias glg='git log --graph --decorate --oneline --format=fuller'
+alias grHH='git reset --hard HEAD'
+
+alias gbr='git branch --sort=-committerdate | head -n 10 | cat -n'

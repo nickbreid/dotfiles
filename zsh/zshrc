@@ -1,0 +1,15 @@
+# Prefer neovim
+alias vim=nvim
+alias tmux='tmux new -s base'
+
+if [ -f ~/dev/dotfiles/zsh/gitaliases ]; then
+	source ~/dev/dotfiles/zsh/gitaliases
+else
+	print "Could not source git aliases"
+fi
+
+if [ -f ~/dev/dotfiles/zsh/gitfns ]; then
+	source ~/dev/dotfiles/zsh/gitfns
+else
+	print "Could not source git functions"
+fi

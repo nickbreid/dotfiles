@@ -1,0 +1,35 @@
+gbrcp () {
+    if [ -z $1 ] ; then
+      echo "Please supply the number associated with a branch; try 'gbr'" && exit;
+    fi
+
+    git branch --sort=-committerdate | head -n $1 | tail -n 1 | cut -c3- | pbcopy
+}
+
+gbrco () {
+    if [ -z $1 ] ; then
+      echo "Please supply the number associated with a branch; try 'gbr'" && exit;
+    fi
+
+    git checkout $(git branch --sort=-committerdate | head -n $1 | tail -n 1 | cut -c3-)
+}
+
+gbreset () {
+    if [ -z $1 ] ; then
+      echo "Please supply a branch name" && exit 1;
+    fi
+
+    git fetch
+    git checkout $1
+    git reset --hard origin/$1
+}
+
+gbak () {
+    local branch_name=$(git rev-parse --abbrev-ref HEAD)
+    local backup_branch_name=${branch_name}_bak
+    git branch -D $backup_branch_name  > /dev/null 2>&1
+    git checkout -b $backup_branch_name > /dev/null 2>&1
+    git checkout - > /dev/null 2>&1
+    echo Created a backup of $branch_name at $backup_branch_name.
+    echo On branch $branch_name
+}
