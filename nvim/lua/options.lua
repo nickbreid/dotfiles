@@ -37,5 +37,8 @@ cmd([[highlight statusline guibg=#e1e2e7]])
 -- Indent tracing character
 g.indentLine_char = '┊'
 
+-- Magit can delete untracked files
+g.magit_discard_untracked_do_delete = 1
+
 -- Disable virtual_text since it's redundant due to lsp_lines.
 vim.diagnostic.config({virtual_text = false, virtual_lines = true})
