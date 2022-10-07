@@ -37,7 +37,7 @@ set-option -w -g window-status-style fg=#3760bf,dim
 
 # Active window label text
 set-option -w -g window-status-current-style fg=#e1e2e7,bg=#2e7de9,bright
-set-option -g window-status-current-format "#[fg=colour31,bg=#e1e2e7]\uE0B6#[fg=#e1e2e7,bg=#2e7de0,bright]#I:#W#[fg=colour31,bg=#e1e2e7]\uE0B4"
+set-option -g window-status-current-format "#[fg=#2e7de9,bg=#e1e2e7]\uE0B6#[fg=#e1e2e7,bg=#2e7de0,bright]#I:#W#[fg=#2e7de9,bg=#e1e2e7]\uE0B4"
 
 # Message style
 set-option -g message-style fg=#e9e9ed,bg=#b15c00
