@@ -1,5 +1,3 @@
-local api = vim.api;
-
 local kb = require('keybindings')
 local map_leader = kb.map_leader
 

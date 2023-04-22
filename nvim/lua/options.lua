@@ -40,5 +40,9 @@ g.indentLine_char = '┊'
 -- Magit can delete untracked files
 g.magit_discard_untracked_do_delete = 1
 
+-- See: https://github.com/preservim/nerdtree/issues/1321
+-- Nerdtree issue with nvim 0.8
+g.NERDTreeMinimalMenu = 1
+
 -- Disable virtual_text since it's redundant due to lsp_lines.
 vim.diagnostic.config({virtual_text = false, virtual_lines = true})

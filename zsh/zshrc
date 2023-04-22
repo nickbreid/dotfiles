@@ -18,3 +18,8 @@ fi
 if [ -f ~/dev/dotfiles/zsh/workrc ]; then
 	source ~/dev/dotfiles/zsh/workrc
 fi
+
+# Yarn install with compression level zero
+# Needs local chromium installed first
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`

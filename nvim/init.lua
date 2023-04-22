@@ -37,6 +37,9 @@ require('plugins.autopairs') -- must come after compe
 -- ./lua/plugins/lsp_lines.lua
 require('plugins.lsp_lines')
 
+-- ./lua/plugins/mason.lua
+require('plugins.mason')
+
 require('colorizer').setup()
 require('gitsigns').setup()
 require("indent_blankline").setup {

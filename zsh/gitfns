@@ -16,7 +16,7 @@ gbrco () {
 
 gbreset () {
     if [ -z $1 ] ; then
-      echo "Please supply a branch name" && exit 1;
+      echo "Please supply a branch name" && return 1;
     fi
 
     git fetch

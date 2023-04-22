@@ -1,0 +1,10 @@
+{
+  "labelLog": {
+    "prefix": ["vl"],
+    "body": "console.log(\"$1\", $1);"
+  },
+  "log": {
+    "prefix": ["cl"],
+    "body": "console.log($1);"
+  }
+}

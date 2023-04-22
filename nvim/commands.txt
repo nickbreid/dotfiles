@@ -1,0 +1,2 @@
+Open LSP log:
+    :lua vim.cmd('e'..vim.lsp.get_log_path())

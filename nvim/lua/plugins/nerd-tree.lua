@@ -5,9 +5,15 @@ local api = vim.api
 
 local map = require('keybindings').map
 
+
+-- g.NERDTreeIgnore = {
+--     "node_modules", ".cache", "*.swp", "*.swm", "*.swo", "*.un*", "tags",
+--     "*.swn", ".DS_Store"
+-- }
+
 g.NERDTreeIgnore = {
-    "node_modules", ".cache", "*.swp", "*.swm", "*.swo", "*.un*", "tags",
-    "*.swn", ".DS_Store"
+    ".cache", "*.swp", "*.swm", "*.swo", "*.un*", "tags",
+    "*.swn", ".DS_Store", "*.min.js"
 }
 g.NERDTreeQuitOnOpen = 1
 g.NERDTreeMinimalUI = 1

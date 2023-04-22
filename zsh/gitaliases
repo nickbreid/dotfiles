@@ -8,6 +8,7 @@ alias gcamend='git commit --amend'
 
 alias gcb='git checkout -b'
 alias gcd='git checkout develop'
+alias gcm='git checkout master'
 alias gco='git checkout'
 alias gc-='git checkout -'
 
@@ -24,6 +25,7 @@ alias gm='git merge'
 alias grb='git rebase'
 alias grbi='git rebase -i'
 alias grbid='git rebase -i develop'
+alias grbim='git checkout master && git pull && git checkout - && git rebase -i master'
 alias grbc='git rebase --continue'
 alias grba='git rebase --abort'
 

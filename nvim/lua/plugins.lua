@@ -4,11 +4,19 @@ local call = vim.call;
 local Plug = fn['plug#']
 call('plug#begin', '~/.config/nvim/plugged')
 
+-- dependency for null-ls and others
+Plug 'nvim-lua/plenary.nvim'
+
+-- mason suite
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'mfussenegger/nvim-dap'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+
 -- lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/lsp_extensions.nvim'
--- Plug "williamboman/nvim-lsp-installer"
--- Plug 'kabouzeid/nvim-lspinstall'
 Plug 'ojroques/nvim-lspfuzzy'
 Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'folke/lua-dev.nvim' -- Lua gotodefinition helper
@@ -26,17 +34,11 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 -- color scheme
--- Plug 'nickbreid/jellybeans-nvim'
--- Plug 'savq/melange'
--- Plug 'sainnhe/gruvbox-material'
--- Plug 'NLKNguyen/papercolor-theme'
 Plug('folke/tokyonight.nvim', {branch = 'main'})
 
 -- status line
--- Plug('glepnir/galaxyline.nvim', {branch = 'main'})
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
--- Plug 'feline-nvim/feline.nvim'
 
 -- nav
 Plug 'preservim/nerdtree'
@@ -47,7 +49,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
--- Plug 'folke/which-key.nvim'
 
 -- formatting
 Plug 'mhartington/formatter.nvim'
@@ -57,7 +58,6 @@ Plug 'kkoomen/vim-doge'
 Plug 'brentyi/isort.vim'
 
 -- cmp
--- Plug 'hh7th/nvim-compe'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-vsnip'

@@ -4,7 +4,7 @@ local nvim_lsp = require 'lspconfig'
 --     'WORKSPACE', 'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt',
 --     'Pipfile', 'pyrightconfig.json'
 -- }
-local function organize_imports()
+local function py_organize_imports()
     local params = {
         command = 'pyright.organizeimports',
         arguments = {vim.uri_from_bufnr(0)}
@@ -16,7 +16,7 @@ nvim_lsp.pyright.setup {
     -- root_dir = nvim_lsp.util.root_pattern(unpack(python_root_files))
     commands = {
         PyrightOrganizeImports = {
-            organize_imports,
+            py_organize_imports,
             description = 'Organize Imports'
         }
     },
@@ -61,9 +61,32 @@ local luadev = require("lua-dev").setup({
 })
 
 require'lspconfig'.sumneko_lua.setup(luadev)
-nvim_lsp.tsserver.setup {};
+
+local function ts_organize_imports()
+    local params = {
+        command = "_typescript.organizeImports",
+        arguments = {vim.api.nvim_buf_get_name(0)},
+        title = ""
+    }
+    vim.lsp.buf.execute_command(params)
+end
+
+nvim_lsp.tsserver.setup {
+    -- on_attach = on_attach,
+    -- capabilities = capabilities,
+    commands = {
+        OrganizeImports = {
+            ts_organize_imports,
+            description = "Organize Imports"
+        }
+    }
+}
+
 nvim_lsp.bashls.setup {};
 nvim_lsp.solargraph.setup {};
+nvim_lsp.eslint.setup {
+    settings = {nodePath = '/Users/nick.reid/dev/fender/.yarn/sdks'}
+}
 
 local rust_tools_opts = {
     tools = { -- rust-tools options
