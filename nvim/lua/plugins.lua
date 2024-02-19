@@ -15,47 +15,50 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 
 -- lsp
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/lsp_extensions.nvim'
+-- Plug 'nvim-lua/lsp_extensions.nvim'
+-- Make the LSP client uses FZF to display results/navigate code
 Plug 'ojroques/nvim-lspfuzzy'
-Plug 'nvim-lua/lsp_extensions.nvim'
-Plug 'folke/lua-dev.nvim' -- Lua gotodefinition helper
+-- Lua gotodefinition helper
+Plug 'folke/neodev.nvim' 
 
 -- diagnostics
 Plug 'https://git.sr.ht/~whynothugo/lsp_lines.nvim'
 
 -- theme
-Plug 'rktjmp/lush.nvim'
-Plug 'machakann/vim-highlightedyank'
-Plug 'folke/lsp-colors.nvim'
-Plug 'sunjon/shade.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'norcalli/nvim-colorizer.lua'
+-- Plug 'rktjmp/lush.nvim'
+-- Plug 'folke/lsp-colors.nvim'
+-- Plug 'sunjon/shade.nvim'
+Plug 'norcalli/nvim-colorizer.lua' -- Highlights hex colors like this: #f8660d 
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'TaDaa/vimade' -- Like Shade
+Plug 'machakann/vim-highlightedyank'
 
 -- color scheme
-Plug('folke/tokyonight.nvim', {branch = 'main'})
+-- Plug('folke/tokyonight.nvim', {branch = 'main'})
+-- Plug 'NLKNguyen/papercolor-theme'
+Plug('catppuccin/nvim', {['as'] = 'catppuccin'})
+Plug('Verf/deepwhite.nvim')
 
 -- status line
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
--- nav
+-- editing
 Plug 'preservim/nerdtree'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug('junegunn/fzf', {dir = '~/.fzf', ['do'] = './install --all'})
 Plug 'junegunn/fzf.vim'
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
+-- Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'windwp/nvim-autopairs'
 
 -- formatting
-Plug 'mhartington/formatter.nvim'
-Plug 'windwp/nvim-autopairs'
-Plug 'sbdchd/neoformat'
-Plug 'kkoomen/vim-doge'
-Plug 'brentyi/isort.vim'
+-- Plug 'mhartington/formatter.nvim'
+-- Plug 'sbdchd/neoformat'
+-- Plug 'brentyi/isort.vim'
+
+-- editing functionality
 
 -- cmp
 Plug 'hrsh7th/nvim-cmp'
@@ -64,17 +67,16 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
 
 -- completion
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
 Plug 'rafamadriz/friendly-snippets'
-Plug 'editorconfig/editorconfig-vim'
+-- Plug 'editorconfig/editorconfig-vim'
 
 -- rust
-Plug 'simrat39/rust-tools.nvim'
+-- Plug 'simrat39/rust-tools.nvim'
 
 -- git
 Plug 'jreybert/vimagit'

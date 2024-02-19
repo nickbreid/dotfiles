@@ -14,6 +14,7 @@ bind Tab last-window        # move to last active window
 bind-key | split-window -h -c '#{pane_current_path}'
 bind-key - split-window -h -c '#{pane_current_path}'
 bind-key = split-window -v -c '#{pane_current_path}'
+bind-key c new-window -c '#{pane_current_path}'
 
 # pane navigation
 bind -r h select-pane -L  # move left
@@ -27,8 +28,8 @@ bind < swap-pane -U       # swap current pane with the previous one
 set -g mouse on
 
 # Status bar
-set-option -g status-style 'bg=#e1e2e7,fg=#3760bf'
-set-option -g status-left "#[bg=#cbcbd0,fg=#717174] #S#[bg=#e1e2e7,fg=#cbcbd0]\uE0B4  "
+set-option -g status-style 'bg=#eff1f5,fg=#3760bf'
+set-option -g status-left "#[bg=#cbcbd0,fg=#717174] #S#[bg=#eff1f5,fg=#cbcbd0]\uE0B4  "
 set-option -g status-right "#[fg=#005f87]$USER@#h #[fg=#005f87]%l:%M %p"
 set-option -g status-interval 60 # Default is 15.
 
@@ -36,8 +37,8 @@ set-option -g status-interval 60 # Default is 15.
 set-option -w -g window-status-style fg=#3760bf,dim
 
 # Active window label text
-set-option -w -g window-status-current-style fg=#e1e2e7,bg=#2e7de9,bright
-set-option -g window-status-current-format "#[fg=#2e7de9,bg=#e1e2e7]\uE0B6#[fg=#e1e2e7,bg=#2e7de0,bright]#I:#W#[fg=#2e7de9,bg=#e1e2e7]\uE0B4"
+set-option -w -g window-status-current-style fg=#eff1f5,bg=#2e7de9,bright
+set-option -g window-status-current-format "#[fg=#2e7de9,bg=#eff1f5]\uE0B6#[fg=#e1e2e7,bg=#2e7de0,bright]#I:#W#[fg=#2e7de9,bg=#e1e2e7]\uE0B4"
 
 # Message style
 set-option -g message-style fg=#e9e9ed,bg=#b15c00

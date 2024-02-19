@@ -3,20 +3,15 @@ local bo = vim.bo
 local cmd = vim.cmd
 local api = vim.api
 
-local map = require('keybindings').map
-
-
--- g.NERDTreeIgnore = {
---     "node_modules", ".cache", "*.swp", "*.swm", "*.swo", "*.un*", "tags",
---     "*.swn", ".DS_Store"
--- }
+local map = require('utils').map
 
 g.NERDTreeIgnore = {
     ".cache", "*.swp", "*.swm", "*.swo", "*.un*", "tags",
-    "*.swn", ".DS_Store", "*.min.js"
+    "*.swn", ".DS_Store", "*.min.js", "*.zip::node_modules*"
 }
 g.NERDTreeQuitOnOpen = 1
 g.NERDTreeMinimalUI = 1
+g.NERDTreeWinSize = 70
 
 function Get_tree_command()
     local command = ""

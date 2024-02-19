@@ -1,7 +1,6 @@
-local kb = require('keybindings')
-local map_leader = kb.map_leader
+local map_leader = require('utils').map_leader
 
-local opts = {noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 
 local find_files = [[<cmd>lua require('telescope.builtin').find_files()<cr>]]
 local live_grep = [[<cmd>lua require('telescope.builtin').live_grep()<cr>]]
@@ -17,8 +16,7 @@ local actions = require "telescope.actions"
 
 require('telescope').setup {
     defaults = {
-        -- Default configuration for telescope goes here:
-        -- config_key = value,
+        file_ignore_patterns = { "src/learning/media", "entrypoints", "**/.yarn/cache", ".d.ts", ".*.zipfile.*" },
         mappings = {
             n = {
                 -- map actions.which_key to <C-h> (default: <C-/>)

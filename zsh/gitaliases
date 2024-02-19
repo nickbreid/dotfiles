@@ -36,3 +36,7 @@ alias glg='git log --graph --decorate --oneline --format=fuller'
 alias grHH='git reset --hard HEAD'
 
 alias gbr='git branch --sort=-committerdate | head -n 10 | cat -n'
+
+alias ghead='git log --oneline | head -1 | awk '{ print $1 }' | pbcopy'
+
+alias ghpr='gh pr checkout $1'
